@@ -47,6 +47,20 @@
     return self.ybht_tableIMP.commonInfo;
 }
 
+- (void)reloadDataWithRowArray:(NSArray<id<YBHTableCellConfig>> *)rowArray {
+    [self.ybht_rowArray removeAllObjects];
+    if (rowArray) {
+        [self.ybht_rowArray addObjectsFromArray:rowArray];
+    }
+}
+
+- (void)reloadDataWithSectionArray:(NSArray<YBHTableSection *> *)sectionArray {
+    [self.ybht_sectionArray removeAllObjects];
+    if (sectionArray) {
+        [self.ybht_sectionArray addObjectsFromArray:sectionArray];
+    }
+}
+
 #pragma mark - getters & setters
 
 static const void *YBHTSectionArrayKey = &YBHTSectionArrayKey;

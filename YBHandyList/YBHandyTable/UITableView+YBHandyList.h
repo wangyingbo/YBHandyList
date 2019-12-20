@@ -33,6 +33,10 @@ NS_ASSUME_NONNULL_BEGIN
  （需要实现额外的 UITableView 代理方法，可以自定义继承 YBHandyTableIMP 的类并赋值该属性）*/
 @property (nonatomic, strong) __kindof YBHandyTableIMP *ybht_tableIMP;
 
+- (void)reloadDataWithRowArray:(NSArray<id<YBHTableCellConfig>> *)rowArray;
+
+- (void)reloadDataWithSectionArray:(NSArray<YBHTableSection *> *)sectionArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

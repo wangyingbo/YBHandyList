@@ -79,11 +79,12 @@
 //    YBHTableSection *section = [YBHTableSection new];
 //    section.header = headerConfig;
 //    [section.rowArray addObjectsFromArray:configArray];
-//    [self.tableView.ybht_sectionArray addObject:section];
+//    [self.tableView reloadDataWithSectionArray:@[section]];
     
     //使用语法糖
     self.tableView.ybht_header = headerConfig;
-    [self.tableView.ybht_rowArray addObjectsFromArray:configArray];
+    //[self.tableView.ybht_rowArray addObjectsFromArray:configArray];
+    [self.tableView reloadDataWithRowArray:configArray.copy];
     
     [self.tableView reloadData];
 }
