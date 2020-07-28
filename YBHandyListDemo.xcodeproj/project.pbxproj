@@ -29,7 +29,6 @@
 		235A7C1F22B8732A00159B0F /* YBHandyListDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C1E22B8732A00159B0F /* YBHandyListDemoTests.m */; };
 		235A7C2A22B8732A00159B0F /* YBHandyListDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C2922B8732A00159B0F /* YBHandyListDemoUITests.m */; };
 		235A7C8422B8BBF300159B0F /* TestCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C8222B8BBF300159B0F /* TestCollectionController.m */; };
-		235A7C8E22B8BC0B00159B0F /* TestTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C8722B8BC0B00159B0F /* TestTableModel.m */; };
 		235A7C8F22B8BC0B00159B0F /* TestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C8A22B8BC0B00159B0F /* TestTableCell.m */; };
 		235A7C9022B8BC0B00159B0F /* TestTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C8D22B8BC0B00159B0F /* TestTableController.m */; };
 		235A7C9522B8BD3E00159B0F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C9222B8BD3E00159B0F /* MainViewController.m */; };
@@ -54,6 +53,7 @@
 		23A8D5DF2309925500D97507 /* WellKnownSayingTableIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5DE2309925500D97507 /* WellKnownSayingTableIMP.m */; };
 		23F3F69D23191D2600A7AD2D /* YBHCCommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3F69C23191D2600A7AD2D /* YBHCCommonInfo.m */; };
 		23F3F6A4231929B500A7AD2D /* YBHTCommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3F6A3231929B500A7AD2D /* YBHTCommonInfo.m */; };
+		D1B161DE24CFE8F500BA2DC7 /* TestTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C8722B8BC0B00159B0F /* TestTableModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -645,6 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B161DE24CFE8F500BA2DC7 /* TestTableModel.m in Sources */,
 				2358914022B9C18E00E0508A /* TestCollectionModel.m in Sources */,
 				23A8D5DA230970DB00D97507 /* WellKnownSayingThreeCellModel.m in Sources */,
 				23A8D5D6230970DB00D97507 /* WellKnownSayingTwoCell.m in Sources */,
@@ -656,7 +657,6 @@
 				235A7C8422B8BBF300159B0F /* TestCollectionController.m in Sources */,
 				23A8D5D4230970DB00D97507 /* WellKnownSayingThreeCell.m in Sources */,
 				235891A422BA87D300E0508A /* YBHTableSection.m in Sources */,
-				235A7C8E22B8BC0B00159B0F /* TestTableModel.m in Sources */,
 				23F3F69D23191D2600A7AD2D /* YBHCCommonInfo.m in Sources */,
 				2358919B22BA87D300E0508A /* YBHandyCollectionIMP.m in Sources */,
 				235891A022BA87D300E0508A /* YBHandyTableIMP.m in Sources */,
