@@ -8,10 +8,32 @@
 
 #import "YBHandyCollectionIMP.h"
 
+@interface YBHandyCollectionIMP ()
+
+@property (nonatomic, strong) YBHandyAction *handyAction;
+
+@end
+
 @implementation YBHandyCollectionIMP {
     NSMutableSet *_reuseCellSet;
     NSMutableSet *_reuseHeaderSet;
     NSMutableSet *_reuseFooterSet;
+}
+
+#pragma mark - forwarding
+
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    if ([super respondsToSelector:aSelector]) {
+      return YES;
+    }
+    if ([self.handyAction respondsToSelector:aSelector]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    return self.handyAction;
 }
 
 #pragma mark - life cycle
@@ -259,6 +281,13 @@
         _commonInfo = [YBHCCommonInfo new];
     }
     return _commonInfo;
+}
+
+- (YBHandyAction *)handyAction {
+    if (!_handyAction) {
+        _handyAction = [[YBHandyAction alloc] initWithProtocol:@protocol(UICollectionViewDelegate)];
+    }
+    return _handyAction;
 }
 
 @end

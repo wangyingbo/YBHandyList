@@ -53,6 +53,7 @@
 		23A8D5DF2309925500D97507 /* WellKnownSayingTableIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A8D5DE2309925500D97507 /* WellKnownSayingTableIMP.m */; };
 		23F3F69D23191D2600A7AD2D /* YBHCCommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3F69C23191D2600A7AD2D /* YBHCCommonInfo.m */; };
 		23F3F6A4231929B500A7AD2D /* YBHTCommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3F6A3231929B500A7AD2D /* YBHTCommonInfo.m */; };
+		A4EFB1F326134CCC008DAA56 /* YBHandyAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A4EFB1F226134CCC008DAA56 /* YBHandyAction.m */; };
 		D1B161DE24CFE8F500BA2DC7 /* TestTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A7C8722B8BC0B00159B0F /* TestTableModel.m */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,8 @@
 		23F3F69C23191D2600A7AD2D /* YBHCCommonInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBHCCommonInfo.m; sourceTree = "<group>"; };
 		23F3F6A2231929B500A7AD2D /* YBHTCommonInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBHTCommonInfo.h; sourceTree = "<group>"; };
 		23F3F6A3231929B500A7AD2D /* YBHTCommonInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBHTCommonInfo.m; sourceTree = "<group>"; };
+		A4EFB1F126134CCC008DAA56 /* YBHandyAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBHandyAction.h; sourceTree = "<group>"; };
+		A4EFB1F226134CCC008DAA56 /* YBHandyAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBHandyAction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				2358918B22BA87D200E0508A /* YBHandyList.h */,
+				A4EFB1F026134CB8008DAA56 /* YBHandyAction */,
 				2358917C22BA87D200E0508A /* YBHandyCollection */,
 				2358918C22BA87D200E0508A /* YBHandyTable */,
 			);
@@ -507,6 +511,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		A4EFB1F026134CB8008DAA56 /* YBHandyAction */ = {
+			isa = PBXGroup;
+			children = (
+				A4EFB1F126134CCC008DAA56 /* YBHandyAction.h */,
+				A4EFB1F226134CCC008DAA56 /* YBHandyAction.m */,
+			);
+			path = YBHandyAction;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -661,6 +674,7 @@
 				2358919B22BA87D300E0508A /* YBHandyCollectionIMP.m in Sources */,
 				235891A022BA87D300E0508A /* YBHandyTableIMP.m in Sources */,
 				23A8D5DF2309925500D97507 /* WellKnownSayingTableIMP.m in Sources */,
+				A4EFB1F326134CCC008DAA56 /* YBHandyAction.m in Sources */,
 				2358919E22BA87D300E0508A /* UICollectionView+YBHandyList.m in Sources */,
 				2358914422B9CBF500E0508A /* TestCollectionNibCell.m in Sources */,
 				23A8D5D8230970DB00D97507 /* WellKnownSayingControllerViewModel.m in Sources */,

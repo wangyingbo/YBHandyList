@@ -11,6 +11,21 @@
 
 @implementation UICollectionView (YBHandyList)
 
+
+- (void)forwardingTo:(id<UITableViewDelegate>)forwardDelegate {
+    [self.ybhc_collectionIMP.handyAction forwardingTo:forwardDelegate];
+    [self resetDelegate];
+}
+
+- (void)removeForwarding:(id<UITableViewDelegate>)forwardDelegate {
+    [self.ybhc_collectionIMP.handyAction removeForwarding:forwardDelegate];
+    [self resetDelegate];
+}
+
+- (void)resetDelegate {
+    self.delegate = self.ybhc_collectionIMP;
+}
+
 #pragma mark - syntactic sugar
 
 - (NSMutableArray<id<YBHCollectionCellConfig>> *)ybhc_rowArray {

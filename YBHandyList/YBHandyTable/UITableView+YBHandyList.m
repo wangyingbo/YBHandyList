@@ -61,6 +61,20 @@
     }
 }
 
+- (void)forwardingTo:(id<UITableViewDelegate>)forwardDelegate {
+    [self.ybht_tableIMP.handyAction forwardingTo:forwardDelegate];
+    [self resetDelegate];
+}
+
+- (void)removeForwarding:(id<UITableViewDelegate>)forwardDelegate {
+    [self.ybht_tableIMP.handyAction removeForwarding:forwardDelegate];
+    [self resetDelegate];
+}
+
+- (void)resetDelegate {
+    self.delegate = self.ybht_tableIMP;
+}
+
 #pragma mark - getters & setters
 
 static const void *YBHTSectionArrayKey = &YBHTSectionArrayKey;
@@ -79,11 +93,11 @@ static const void *YBHTSectionArrayKey = &YBHTSectionArrayKey;
 }
 
 static const void *YBHTableIMPKey = &YBHTableIMPKey;
-- (void)setYbht_tableIMP:(YBHandyTableIMP *)ybhl_tableIMP {
-    ybhl_tableIMP.sectionArray = self.ybht_sectionArray;
-    self.delegate = ybhl_tableIMP;
-    self.dataSource = ybhl_tableIMP;
-    objc_setAssociatedObject(self, YBHTableIMPKey, ybhl_tableIMP, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setYbht_tableIMP:(YBHandyTableIMP *)ybht_tableIMP {
+    ybht_tableIMP.sectionArray = self.ybht_sectionArray;
+    self.delegate = ybht_tableIMP;
+    self.dataSource = ybht_tableIMP;
+    objc_setAssociatedObject(self, YBHTableIMPKey, ybht_tableIMP, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (YBHandyTableIMP *)ybht_tableIMP {
     YBHandyTableIMP *imp = objc_getAssociatedObject(self, YBHTableIMPKey);

@@ -37,6 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)reloadDataWithSectionArray:(NSArray<YBHTableSection *> *)sectionArray;
 
+/**转发UITableViewDelegate事件*/
+- (void)forwardingTo:(id<UITableViewDelegate>)forwardDelegate;
+
+- (void)removeForwarding:(id<UITableViewDelegate>)forwardDelegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

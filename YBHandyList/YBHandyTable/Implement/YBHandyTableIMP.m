@@ -8,7 +8,28 @@
 
 #import "YBHandyTableIMP.h"
 
+@interface YBHandyTableIMP ()
+
+@property (nonatomic, strong) YBHandyAction *handyAction;
+
+@end
+
 @implementation YBHandyTableIMP
+
+#pragma mark - forwarding
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    if ([super respondsToSelector:aSelector]) {
+      return YES;
+    }
+    if ([self.handyAction respondsToSelector:aSelector]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    return self.handyAction;
+}
 
 #pragma mark - UITableViewDelegate
 
@@ -210,6 +231,13 @@
         _commonInfo = [YBHTCommonInfo new];
     }
     return _commonInfo;
+}
+
+- (YBHandyAction *)handyAction {
+    if (!_handyAction) {
+        _handyAction = [[YBHandyAction alloc] initWithProtocol:@protocol(UITableViewDelegate)];
+    }
+    return _handyAction;
 }
 
 @end

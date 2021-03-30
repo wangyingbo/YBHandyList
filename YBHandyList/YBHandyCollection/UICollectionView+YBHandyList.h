@@ -39,6 +39,11 @@ NS_ASSUME_NONNULL_BEGIN
  （需要实现额外的 UICollectionView 代理方法，可以自定义继承 YBHandyTableIMP 的类并赋值该属性）*/
 @property (nonatomic, strong) __kindof YBHandyCollectionIMP *ybhc_collectionIMP;
 
+/**转发UICollectionViewDelegate事件*/
+- (void)forwardingTo:(id<UICollectionViewDelegate>)forwardDelegate;
+
+- (void)removeForwarding:(id<UICollectionViewDelegate>)forwardDelegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,7 +14,7 @@
 #import "TestTableNibHeader.h"
 #import "YBHandyList.h"
 
-@interface TestTableController () <TestTableNibCellDelegate>
+@interface TestTableController () <TestTableNibCellDelegate,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
@@ -41,6 +41,8 @@
 #pragma mark - private
 
 - (void)loadData {
+    
+    [self.tableView forwardingTo:self];
     
     // ① 模拟构建数据模型
     
@@ -86,6 +88,7 @@
     //[self.tableView.ybht_rowArray addObjectsFromArray:configArray];
     [self.tableView reloadDataWithRowArray:configArray.copy];
     
+    
     [self.tableView reloadData];
 }
 
@@ -107,6 +110,12 @@
         _tableView.estimatedSectionHeaderHeight = 0;
     }
     return _tableView;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"响应了willDisplayCell");
 }
 
 @end

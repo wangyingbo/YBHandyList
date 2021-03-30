@@ -8,6 +8,7 @@
 
 #import "YBHCollectionSection.h"
 #import "YBHCCommonInfo.h"
+#import "YBHandyAction.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 是否激活 UICollectionViewFlowLayout 的布局属性，默认为 NO */
 @property (nonatomic, assign) BOOL enabledFlowLayoutProperties;
+
+/**处理转发delegate事件*/
+@property (nonatomic, strong, readonly) YBHandyAction *handyAction;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "YBHTableSection.h"
 #import "YBHTCommonInfo.h"
+#import "YBHandyAction.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 公共信息对象，将会下发到 Cell/Header/Footer */
 @property (nonatomic, strong) YBHTCommonInfo *commonInfo;
+
+/**处理转发delegate事件*/
+@property (nonatomic, strong, readonly) YBHandyAction *handyAction;
 
 @end
 
